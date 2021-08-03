@@ -37,11 +37,11 @@ where:
 + *nips4b_birdchallenge_espece_list.csv* is the NIPS4B species list (csv) within the [NIPS4B train labels](http://sabiod.univ-tln.fr/nips4b/media/birds/NIPS4B_BIRD_CHALLENGE_TRAIN_LABELS.tar)
 + *output_path* is the output path for the lists of files and labels
 
-This generates lists of train and test files, and dictionary label files. The dictionary files list three class selections: *All Classes*, *Bird Classes* and *Bird Species*. But, there are only two sets of random train and test files: *all_classes* and *bird*. The set *bird* is combined with both the *Bird Classes* and *Bird Species* dictionaries for the respective experiments. Samples of these files are included under [data_lists](https://github.com/fbravosanchez/NIPS4Bplus/data_lists)
+This generates lists of train and test files, and dictionary label files. The dictionary files list three class selections: *All Classes*, *Bird Classes* and *Bird Species*. But, there are only two sets of random train and test files: *all_classes* and *bird*. The set *bird* is combined with both the *Bird Classes* and *Bird Species* dictionaries for the respective experiments. Samples of these files are included under [data_lists](https://github.com/fbravosanchez/NIPS4Bplus/tree/master/data_lists)
 
 ### 2 Run the SincNet experiment with default settings
 Use the SincNet code from:
-https://github.com/mravanelli/SincNet. Follow the instructions in the SincNet repository but instead of using the Timit experiment settings, use one of the [cfg](https://github.com/fbravosanchez/NIPS4Bplus/cfg) files corresponding to your choice of experiment to run: *all classes*, *bird classes* or *bird species*. The [cfg](https://github.com/fbravosanchez/NIPS4Bplus/cfg) files maintain the settings of the Timit experiment in the [SincNet repository](https://github.com/mravanelli/SincNet) except for the [changes required](https://www.nature.com/articles/s41598-021-95076-6) for this dataset and each individual experiment. Modify the [data] section of the corresponding cfg file (ie. [*cfg/nips4bplus_all_classes.cfg*](https://github.com/fbravosanchez/NIPS4Bplus/cfg/nips4bplus_all_classes.cfg)) according to your paths.
+https://github.com/mravanelli/SincNet. Follow the instructions in the SincNet repository but instead of using the Timit experiment settings, use one of the [cfg](https://github.com/fbravosanchez/NIPS4Bplus/tree/master/cfg) files corresponding to your choice of experiment to run: *all classes*, *bird classes* or *bird species*. The [cfg](https://github.com/fbravosanchez/NIPS4Bplus/tree/master/cfg) files maintain the settings of the Timit experiment in the [SincNet repository](https://github.com/mravanelli/SincNet) except for the [changes required](https://www.nature.com/articles/s41598-021-95076-6) for this dataset and each individual experiment. Modify the [data] section of the corresponding cfg file (ie. [*cfg/nips4bplus_all_classes.cfg*](https://github.com/fbravosanchez/NIPS4Bplus/tree/master/cfg/nips4bplus_all_classes.cfg)) according to your paths.
 
 + *tr_lst* is the *"all_classes_train_files.scp"* generated in b) above
 + *te_lst* is the *"all_classes_test_files.scp"* generated in b) above
@@ -86,11 +86,11 @@ where:
 + *nips4b_birdchallenge_espece_list.csv* is the NIPS4B species list (csv) within the [NIPS4B train labels](http://sabiod.univ-tln.fr/nips4b/media/birds/NIPS4B_BIRD_CHALLENGE_TRAIN_LABELS.tar)
 + *output_path* is the output path for the lists of files and labels
 
-This generates random train and test lists (that include the tag labels) as csv files for three selections of classes: *All Classes*, *Bird Classes* and *Bird Species*. Samples of these csv files are included under [mod_data_lists](https://github.com/fbravosanchez/NIPS4Bplus/mod_data_lists).
+This generates random train and test lists (that include the tag labels) as csv files for three selections of classes: *All Classes*, *Bird Classes* and *Bird Species*. Samples of these csv files are included under [mod_data_lists](https://github.com/fbravosanchez/NIPS4Bplus/tree/master/mod_data_lists).
 
 ### 3 Run the modified SincNet code
 
-The script *call_id.py* is a modified version of the *speaker_id.py* script from [SincNet](https://github.com/mravanelli/SincNet). First modify the [data] section, according to your paths, of one of the [mod_cfg](https://github.com/fbravosanchez/NIPS4Bplus/mod_cfg) files corresponding to your choice of experiment to run: *all classes*, *bird classes* or *bird species* (ie. *mod_cfg/mod_nips4bplus_all_classes.cfg*).
+The script *call_id.py* is a modified version of the *speaker_id.py* script from [SincNet](https://github.com/mravanelli/SincNet). First modify the [data] section, according to your paths, of one of the [mod_cfg](https://github.com/fbravosanchez/NIPS4Bplus/tree/master/mod_cfg) files corresponding to your choice of experiment to run: *all classes*, *bird classes* or *bird species* (ie. *mod_cfg/mod_nips4bplus_all_classes.cfg*).
 
 + *tr_lst* is the *"mod_all_classes_train_files.csv"* generated in step 2 above
 + *te_lst* is the *"mod_all_classes_test_files.csv"* generated in step 2 above
@@ -98,7 +98,7 @@ The script *call_id.py* is a modified version of the *speaker_id.py* script from
 + *data_folder* is the folder with the normalised files generated in step 1 above
 + *output_path* is the output path for the training results and model files
 
-Each [mod_cfg](https://github.com/fbravosanchez/NIPS4Bplus/mod_cfg) file includes the best settings that we found for each experiment.
+Each [mod_cfg](https://github.com/fbravosanchez/NIPS4Bplus/tree/master/mod_cfg) file includes the best settings that we found for each experiment.
 
 Then run *call_id.py* as follows:
 
@@ -135,4 +135,3 @@ http://sabiod.univ-tln.fr/nips4b/media/birds/NIPS4B_BIRD_CHALLENGE_TRAIN_TEST_WA
 
 Source of NIPS4Bplus transcriptions:
 https://doi.org/10.6084/m9.figshare.6798548
-

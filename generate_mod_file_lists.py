@@ -59,7 +59,7 @@ for i, j in lbl_files.iterrows():
     try:
         k = pd.read_csv(j['csv'], header=None)
         tags = True
-    except pd.io.common.EmptyDataError:
+    except pd.errors.EmptyDataError:
         tags = False
 
     #for each valid csv file process tags

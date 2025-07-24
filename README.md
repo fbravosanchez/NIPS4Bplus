@@ -9,7 +9,7 @@ Information Processing Scaled for Bioacoustics (NIPS4B) challenge for bird song
 classification](http://sabiod.lis-lab.fr/nips4b/challenge1.html). To use the data in [SincNet](http://arxiv.org/abs/1808.00158) with the default settings, we first prepare the files by cutting them according to the tags and then generate train, test and label lists. 
 ### 1 NIPS4Bplus data preparation.
 #### a) Cut files
-The first step is to cut the original training [NIPS4B wavefiles](https://sabiod.univ-tln.fr/nips4b/media/birds/NIPS4B_BIRD_CHALLENGE_TRAIN_TEST_WAV.tar.gz) according to the [NIPS4Bplus csv annotations](https://doi.org/10.6084/m9.figshare.6798548). Run the script *cut_nips4bplus_files.py* as follows:
+The first step is to cut the original training [NIPS4B wavefiles](https://sabiod.lis-lab.fr/nips4b/media/birds/NIPS4B_BIRD_CHALLENGE_TRAIN_TEST_WAV.tar.gz) according to the [NIPS4Bplus csv annotations](https://doi.org/10.6084/m9.figshare.6798548). Run the script *cut_nips4bplus_files.py* as follows:
 
 ```
 python cut_nips4bplus_files.py nips4b_bird_wav_folder nips4bplus_csv_folder output_path
